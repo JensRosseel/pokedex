@@ -32,7 +32,7 @@ export default function App() {
 
   return (
     <>
-      <div className='pokedex'>
+      <div className='container'>
         <form onSubmit={handleSubmit}>
           <label>
             <input type="text" onChange={handleChange} placeholder='Enter pokemon name...'></input>
@@ -40,26 +40,30 @@ export default function App() {
         </form>
         {pokemonData.map((data) => {
           return(
-            <div className='container'>
-              <img />
-              <table>
-                <tr>
-                  <td>Type:</td>
-                  <td>{pokemonType}</td>
-                </tr>
-                <tr>
-                  <td>Height:</td>
-                  <td>{data.height}</td>
-                </tr>
-                <tr>
-                  <td>Weight:</td>
-                  <td>{data.weight}</td>
-                </tr>
-                <tr>
-                  <td>Type:</td>
-                  <td>{pokemonType}</td>
-                </tr>
-              </table>
+            <div className='pokedex'>
+              <div className='rotom'>
+                <img src={data.sprites['front_default']} />
+              </div>
+              <div className='data-container'>
+                <div className='table'>
+                  <div className='table-row'>
+                    <div className='table-data'>Type:</div>
+                    <div className='table-data'>{pokemonType}</div>
+                  </div>
+                  <div className='table-row'>
+                    <div className='table-data'>Height:</div>
+                    <div className='table-data'>{data.height / 10} m</div>
+                  </div>
+                  <div className='table-row'>
+                    <div className='table-data'>Weight:</div>
+                    <div className='table-data'>{data.weight / 10} kg</div>
+                  </div>
+                  <div className='table-row'>
+                    <div className='table-data'>Type:</div>
+                    <div className='table-data'>{pokemonType}</div>
+                  </div>
+                </div>
+              </div>
             </div>
           )
         })}

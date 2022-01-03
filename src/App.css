@@ -1,0 +1,54 @@
+body{
+  display: flex;
+  justify-content: center;
+  background-image: url('./img/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.container{
+  margin-top: 10%;
+}
+
+.pokedex{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 600px;
+  height: 533px;
+}
+
+.rotom{
+  background-image: url('./img/rotom-pokedex.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+}
+
+.rotom img{
+  margin-top: 50%;
+  height: 275px;
+  width: 275px;
+}
+
+.data-container{
+  border: 2px solid rgb(206, 66, 64);
+  border-left: none;
+  padding: 10px;
+}
+
+.table-row{
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.table-data{
+  margin: 10px;
+}
+
+input{
+  background-color: white;
+  border: 2px solid rgb(206, 66, 64);
+  border-bottom: none;
+}
