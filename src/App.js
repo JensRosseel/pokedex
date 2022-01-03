@@ -58,10 +58,6 @@ export default function App() {
                     <div className='table-data'>Weight:</div>
                     <div className='table-data'>{data.weight / 10} kg</div>
                   </div>
-                  <div className='table-row'>
-                    <div className='table-data'>Type:</div>
-                    <div className='table-data'>{pokemonType}</div>
-                  </div>
                 </div>
               </div>
             </div>
